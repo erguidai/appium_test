@@ -71,8 +71,9 @@ class TestGupiao:
                 print("搜索失败")
 
     def test_touchaction(self):
-        self.driver.find_element_by_xpath(
-            '//android.support.v7.app.ActionBar.Tab[@content-desc="资讯"]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView').click()
+        # self.driver.find_element_by_xpath(
+        #     '//android.support.v7.app.ActionBar.Tab[@content-desc="资讯"]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView').click()
+        self.driver.find_element_by_xpath("//*[@class='android.support.v7.app.ActionBar$Tab' and @content-desc='资讯']")
         action = TouchAction(self.driver)
         window_rect = self.driver.get_window_rect()  # {'width': 810, 'height': 1440, 'x': 0, 'y': 0}
         width = window_rect['width']

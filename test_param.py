@@ -37,6 +37,7 @@ class TestGupiao:
         '''
 
     @pytest.mark.parametrize('searchkey, type, price', [('alibaba', 'BABA', 200), ('xiaomi', '01810', 10)])
+    # @pytest.mark.parametrize('searchkey, type, price', [('alibaba', 'BABA', 200)])
     def test_search(self, searchkey, type, price):
         print("搜索测试用例")
         self.driver.find_element_by_id('com.ss.android.caijing.stock:id/iv_search').click()
